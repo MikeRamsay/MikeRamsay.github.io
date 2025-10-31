@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="uft-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1">
+        <link rel="stylesheet" href="../style.css">
+        <title>Mike Ramsay | Portfolio</title>
+    </head>
+    <body>
+        <div class="header">
+            <a href="../index.html"> <h2>HOME</h2> </a>
+            <a href="../about.html"> <h2>ABOUT ME</h2> </a>
+            <a href="../portfolio.html"> <h2>PORTFOLIO</h2> </a>
+            <a href="../resume.html"> <h2>RESUME</h2> </a>
+        </div>
+        
+        <br>
+        <div class="ppTitle"> 
+            <h1>New Orleans Land Classification</h1> 
+            <h3> Classifying satellite imagery using Google Earth Engine </h3>
+            <h4> March 2025 </h4>
+        </div> 
+
+        <div class="ppContainer"> 
+            <div class="ppGrid">
+                <div class="ppImage-Container"> 
+                    <div class="ppImage"> 
+                        <img src="../images/NOLALandClass.png" alt="Land Classification in GEE" style="width:100%">
+                    </div>
+                    <div class="ppImage"> 
+                        <img src="../images/NOLALandClass2.png" alt="Land Classification in GEE" style="width:100%">
+                    </div>
+                </div> 
+                <div class="ppContent-Container">
+                    <div class="ppContent"> 
+                        <h2> Project Summary </h2>
+                        <p> 
+                            The goal of this project was to explore the land classification process and perform geospatial processing at scale with Google Earth Engine. To do this I used the internal Sentinel 2 satellite dataset in Google Earth Engine. Then, I ran a script to filter for satellite imagery with less than 10% cloud cover and set the date range to the 2024 calendar year. The next step was to build an image classifier which classifies the satellite image based on inputted training points. The process of adding these training points was relatively straightforward, consisting of manually adding points with the geometry import function to their proper classification on the satellite imagery. I added around 10 points for each feature class. The map to the left, on the bottom, only has 4 feature classes; urban, bare, water and vegetation. However, the top image has 2 additional feature classes, being two vegetation classifications, one for trees and one for grass, and the urban class was also split into roads/pavement and buildings. These additional classifications create an image with a greater level of detail as major roadways and open fields become distinguishable. 
+                        </p>
+                        <br>
+                        <p>
+                            A real-world application for this type of mapping that comes to mind is flood risk analysis or permeable surface mapping. Something that is particularly important in cities like New Orleans which are at a greater risk to flood water-related events. This project also brought to light the impacts and responsibilities that geographers bare when conducting land classification analysis, especially when using training data and classes to speed up the classification process. Being aware of these implications is particularly important when this work has real-world impacts on the environment and people.
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="ppTitle">
+                <h3><strong><u>Classifying Healthy Vegetation using Normalized Difference Vegetation Index (NDVI)</u></strong> </h3>
+            </div>
+            <div class="ppGrid">
+                <div class="ppImage-Container">
+                    <div class="ppImage"> 
+                        <img src="../images/NOLA_landcover.gif" alt="NDVI Classification GIF" style="width:100%">
+                    </div>
+                </div>
+                <div class="ppContent-Container2">
+                    <div class="ppContent">
+                        <p>
+                            For the next portion of this project, I classified healthy vegetation in the Sentinel-2 imagery by calculating the Normalized Difference Vegetation Index or NDVI. This is a measure of vegetation health and density which is calculated from the formula: NDVI = (NIR - Red) / (NIR + Red). The healthier vegetation contains more chlorophyll which reflects the most near-infrared (NIR) and green light. For Sentinel-2, spectral band 8 contains NIR wavelengths and Band 4 contains red wavelengths. So, I used the formula (Band 8 - Band 4)/(Band 8 + Band 4) in my script to calculate the NDVI. Google Earth Engine has a built in function (image.normalizedDifference) which calculates this function with the given values: 
+                        </p>
+                        <br>
+                        <p> <i>var ndvi = image.normalizedDifference(['B8', 'B4']).rename('ndvi');</i> </p>
+                        <br>
+                        <p>
+                            This produced the NDVI layer for the given date range. To achieve the animated GIF, I captured NDVI layers for each month of 2024 to showcase the change in vegetation throughout the year. The graph below showcases these yearly changes in NDVI for this region. January-March appears to have the lowest average NDVI values, indicating less vegetation which is typical during the winter months. However, New Orleans is located by the coast and experiences consistent rainfall year round which most likely has an impact on the range of NDVI values in the graph or lack thereof.
+                        </p>
+                        <br>
+                        <div class="ppImage"> 
+                            <img src="../images/ndvi_timeline.png" alt="NDVI Timeline" style="width:100%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><b>Contact:</b> If you would like to contact me, please reach out through my email or LinkedIn.
+            <br>
+            <b>mikeramsay2@gmail.com</b>
+            <br>
+            <a href="https://www.linkedin.com/in/mike-ramsay-m0922/"> 
+                <img src="../images/LinkedIn_icon.png" alt="LinkedIn Logo" width="50px"> </a>
+        </div>
+       
+        <div class="subfooter">
+            <p>Created by Mike Ramsay</p>
+        </div>
+
+    </body>
+</html>

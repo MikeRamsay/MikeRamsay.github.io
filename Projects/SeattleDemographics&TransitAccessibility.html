@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="uft-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1">
+        <link rel="stylesheet" href="../style.css">
+        <title>Mike Ramsay | Portfolio</title>
+    </head>
+    <body>
+        <div class="header">
+            <a href="../index.html"> <h2>HOME</h2> </a>
+            <a href="../about.html"> <h2>ABOUT ME</h2> </a>
+            <a href="../portfolio.html"> <h2>PORTFOLIO</h2> </a>
+            <a href="../resume.html"> <h2>RESUME</h2> </a>
+        </div>
+        
+        <br>
+        <div class="ppTitle"> 
+            <h1>Analyzing Seattle Transit Accessibility & Demographic Data</h1> 
+            <h3> Produced during lab for GEOGRAPHY 461: Urban GIS </h3>
+            <h4> February 2025 </h4>
+        </div> 
+
+        <div class="ppContainer"> 
+            <div class="ppGrid3">
+                <div class="ppImage-Container"> 
+                    <div class="ppImage"> 
+                        <img src="../images/TransitAcess_Stops.jpg" alt="Transit Stop Locations by Pop Block Group" style="width:100%">
+                    </div>
+                </div> 
+                <div class="ppContent-Container">
+                    <div class="ppContent"> 
+                        <h2> Project Summary </h2>
+                        <p> 
+                            This lab utilizes General Transit feed Specification (GTFS) schedule data from King County Metro courtesy 
+                            of Sound Transit. The goal was to highlight areas underserved the greatest and compare it to demographic 
+                            data to get a better picture of where in the city has the greatest need for public transit expansion. This 
+                            was achieved with some buffer analysis, masking and the Census Block Groups data within ArcGIS. 
+                            The data used includes three key variables that influence accessibility level needs around the city. Those 
+                            being population density, households below the poverty line and households without access to a personal vehicle.  
+                        </p>
+                        <br>
+                        <div class="ppImage-Container3"> 
+                            <div class="ppImage"> 
+                                <img src="../images/TransitAccessiblityTable.png" alt="Table for Seattle Transit Accessibility" style="width:100%">
+                            </div>
+                        </div>
+                        <br>
+                        <p>
+                            Regions with higher numbers of households below the poverty line and without access to vehicles as well as 
+                            higher population densities are highlighted on both maps I created. The map on the left includes the service 
+                            area within a 10 minute walk in blue and individual bus stop locations around the city. The map to the right 
+                            highlights the underserved regions around the city, there are quite a few around Rainier Valley and White 
+                            Center as well as around Northgate. Figure 3 above showcases the counts of each population and the 
+                            share/count of that population that is not within 10 minute access to a transit stop.
+                        </p>
+                        <br>
+                            <a href="https://www.soundtransit.org/help-contacts/business-information/open-transit-data-otd/otd-downloads"> 
+                                <h3> Sound Transit Data Source </h3> 
+                            </a>
+                            <a href="https://learn.arcgis.com/en/projects/assess-access-to-public-transit/"> 
+                                <h3> Lab Data Source </h3> 
+                            </a>
+                    </div>
+                </div>
+                <div class="ppImage-Container2">
+                    <div class="ppImage"> 
+                        <img src="../images/TransitAcess_UnservedAreas.jpg" alt="Underserved Transit Areas in Seattle" style="width:100%">
+                    </div>
+                </div> 
+
+                
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><b>Contact:</b> If you would like to contact me, please reach out through my email or LinkedIn.
+            <br>
+            <b>mikeramsay2@gmail.com</b>
+            <br>
+            <a href="https://www.linkedin.com/in/mike-ramsay-m0922/"> 
+                <img src="../images/LinkedIn_icon.png" alt="LinkedIn Logo" width="50px"> </a>
+        </div>
+       
+        <div class="subfooter">
+            <p>Created by Mike Ramsay</p>
+        </div>
+
+    </body>
+</html>
