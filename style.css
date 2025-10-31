@@ -1,0 +1,376 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* Nav Bar Styler */
+.header{
+    width: 100vw;
+    height: 100px;
+    background: #2a3745;
+    color: white;
+    font-family: sans-serif;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header a {
+    color: white;
+    font-family: sans-serif;
+    margin-right: 30px
+}
+
+
+
+/* Main page background */
+.container{ 
+    width: 100vw; 
+    min-height: 70vh; 
+    background: #2a3745; 
+    z-index: 1; 
+
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative;
+    overflow: hidden;
+} 
+/* Main page photos */ 
+.intro_image_border{ 
+    position:absolute; 
+    top: 5vh; 
+    right: 50%;
+    transform: translateX(40vw);
+    z-index: 2; 
+
+    width: 45vw; 
+    max-width: 750px;
+    aspect-ratio: 16/9;
+    background: black; 
+    border-radius: 8px;
+    overflow: hidden;
+
+} 
+.intro_image{ 
+    position:absolute; 
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%,-50%);
+    /*width: 100%;
+    height: 100%;
+    object-fit: cover;*/
+    z-index: 3; 
+}
+/* Main Page intro blurb */
+.intro{
+    position:absolute;
+    top: 25vh;
+    left: 50%;
+    transform: translateX(-40vw);
+    z-index: 4;
+
+    width: 50vw;
+    max-width: 900px;
+    min-width: 280px;
+    height: 45vmin;
+    background: black;
+    opacity: 0.8;
+    border-radius: 8px;
+    padding: 2rem;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: white;
+    font-family: sans-serif;
+} 
+.intro h1 {
+    margin-top:0px;
+    margin-bottom: 10px;
+    letter-spacing: 2.5px;
+    font-size: 2.5vw;
+}
+.intro p {
+    margin: 0 1.5rem;
+    line-height: 1.7;
+    font-size: 1.3vw;
+}
+.intro a {
+    margin: 8px;
+    color: #4883b8;
+    font-family: sans-serif;
+    font-size: 1vw;
+}
+/* Main Page Project Highlight */
+.homeTitle {
+    font-size: x-large;
+    font-family: sans-serif;
+    color: #2a3745; 
+    letter-spacing: 2px;
+    line-height: 1.3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.homeContainer{
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.homeGrid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 40px;
+}
+.homeImage img {
+    border: solid 3px black;
+    width: 45vw;
+    justify-content: right;
+}
+.homeContent{
+    background-color: #6d92ba;
+    color: white;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+}
+.homeContent h1 {
+    font-size: 2.2vw;
+    font-family: sans-serif;
+    display: block;
+    text-align: center;
+    padding-bottom: 5px;
+}
+.homeContent h2 {
+    font-size: 1.4vw;
+    font-family: sans-serif;
+    display: block;
+    text-align: center;
+}
+.homeContent p {
+    font-size: 1.2vw;
+    line-height: 1.5;
+    font-family: sans-serif;
+    text-indent: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* About Me Page */
+.MikePicture {
+    display: inline-block;
+    width: 30%;
+}
+.MikePicture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: solid 3px black;
+}
+.AboutMe {
+    margin-left: 80px;
+    vertical-align: top;
+    display: inline-block;
+    text-align: left;
+    width: 60%;
+    line-height: 1.3;
+    text-indent: 3em;
+    font-family: sans-serif;
+}
+
+
+
+/* Portfolio Page */
+.PortfolioTitle {
+    font-size: x-large;
+    font-family: sans-serif;
+    color: #2a3745; 
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.portfolioContent {
+    background-color: white;
+    padding: 20px;
+    justify-content: center;
+}
+.portGrid {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    gap: 20px;
+    margin: 10px;
+}
+.portContent {
+    background-color: #6d92ba;
+    color: white;
+    padding: 20px;
+}
+.portText {
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: large;
+}
+
+
+/* Individual Portfolio Page Styling */
+.ppTitle {
+    font-size: large;
+    font-family: sans-serif;
+    color: #2a3745; 
+    letter-spacing: 2px;
+    line-height: 1.3;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.ppTitle h1, .ppTitle h3, .ppTitle h4 {
+    display: block;
+    text-align: center;
+}
+.ppContainer{
+    background-color: white;
+    padding: 20px;
+    justify-content: center;
+}
+.ppGrid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    gap: 30px;
+    margin: 20px;
+}
+.ppGrid3{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    gap: 20px;
+    margin: 20px;
+}
+.ppImage img {
+    border: solid 3px black;
+}
+.ppContent{
+    background-color: #6d92ba;
+    color: white;
+    padding: 20px;
+    font-family: sans-serif;
+}
+.ppContent h2 {
+    text-align: center;
+}
+.ppContent a {
+    color: white;
+    text-align: center;
+}
+.ppContent p {
+    text-indent: 30px;
+    font-size: 1vw;
+    line-height: 1.5;
+}
+.line {
+    height:0.2vw;
+    width:80%;
+    background-color: #2a3745;
+    margin:20px auto;
+}
+.ppGraph {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ppGraph img {
+    max-width:60%;
+    height:auto;
+    display:block;
+}
+.ppGraph h2, .ppGraph h3 {
+    text-align: center;
+    color: #2a3745;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+
+/* Resume Page */
+.resumeTitle {
+    font-size: x-large;
+    font-family: sans-serif;
+    color: #2a3745; 
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resumeImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: auto;
+}
+.resumeDownload {
+    font-size: large;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resumeDownload h3 {
+    color: #2a3745; 
+}
+
+
+
+/* Footer styler */
+.footer{
+    width: 100vw;
+    height: 200px;
+    background: #4883b8;
+    color: white;
+    font-family: sans-serif;
+    font-size: x-large;
+    line-height: 1.7;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    gap: 40px;
+}
+.footer a {
+    color: white;
+    font-family: sans-serif;
+    margin: 50px;
+}
+/* SubFooter styler */
+.subfooter{
+    width: 100vw;
+    height: 50px;
+    background: #2a3745;
+    color: white;
+    font-family: sans-serif;
+    font-size: medium;
+    line-height: 1.5;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
